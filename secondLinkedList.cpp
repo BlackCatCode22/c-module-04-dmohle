@@ -62,6 +62,21 @@ int main() {
     cout << "\n Printing the new list\n";
     printList(pHead);
 
+    // Traverse the list until a "w" is
+    // Create a pointer named pCursor
+    Node* pCursor = pHead;
+    // Create a while loop with a loop control variable.
+    string strCurrent = pCursor->dataField;
+    int nodeNumber = 0;
+    while (strCurrent.compare("w") != 0) {
+        // Traverse the list
+        pCursor = pCursor->pNext;
+        strCurrent = pCursor->dataField;
+        nodeNumber++;
+    }
+    // My w was found at what node number
+    cout <<" \n the w was found at node number: " << nodeNumber << endl;
+
 
     return 0;
 }
